@@ -1,0 +1,47 @@
+:root {
+  --text: #20303a;
+  --text-strong: #102027;
+  --muted: #45606d;
+  --border: #b7d0d9;
+  --border-soft: #d7e6eb;
+  --card-bg: #ffffff;
+  --card-bg-alt: #f4fbfe;
+  --status-bg: #ebf8ff;
+  --status-border: #96d4ee;
+  --metric-bg: #f7fdff;
+  --focus-ring: #0ea5e9;
+  --shadow: 0 18px 40px rgba(2, 38, 53, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.22), transparent 38%),
+    radial-gradient(circle at 80% 0%, rgba(14, 116, 144, 0.2), transparent 28%),
+    linear-gradient(180deg, #e7f7fd 0%, #d7ecf8 45%, #e4f5fd 100%);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: var(--text-strong);
+  font-size: clamp(1.9rem, 5vw, 2.9rem);
+  line-height: 1.1;
+}

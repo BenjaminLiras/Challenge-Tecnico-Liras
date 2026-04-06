@@ -1,16 +1,41 @@
-# React + Vite
+# JuegoContador
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacion web en React donde el usuario intenta hacer la mayor cantidad de clicks posible en 5 segundos.
 
-Currently, two official plugins are available:
+## Funcionalidad
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Boton para iniciar el juego.
+- Boton para hacer clicks durante la partida.
+- Puntaje maximo que arranca en 0.
+- Cuenta regresiva visual: Preparados, Listos, Ya (1 segundo entre cada mensaje).
+- Al aparecer Ya, se habilita el boton de click por 5 segundos.
+- Durante el juego se muestra tiempo restante y contador actual.
+- Al finalizar, se deshabilita el boton de click y se vuelve a habilitar el de inicio.
+- Si el puntaje actual supera el maximo, se actualiza el maximo.
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
 
-## Expanding the ESLint configuration
+## Como correrlo en local
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Instalar dependencias:
+
+```bash
+npm install
+```
+
+2. Levantar entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+3. Abrir en el navegador la URL que muestra Vite (por ejemplo http://localhost:5173).
+
+## Supuestos y consideraciones
+
+- El puntaje maximo se guarda solo en memoria mientras la app esta abierta.
+- Si el usuario intenta iniciar mientras ya hay una cuenta regresiva o una partida activa, no pasa nada.
